@@ -6,12 +6,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      variants: {
+        animation: ["motion-safe"]
+      },
       animation: {
-        shine: "shine 1s",
+        fadeIn: "fadeIn 2s ease-in forwards",
       },
       keyframes: {
-        shine: {
-          "100%": { left: "125%" },
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": {opacity: 1}
         },
       }
     },
