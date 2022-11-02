@@ -16,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/myAvatar.svg" />
       </Head>
 
-      <main className=''>
+      <main className='flex flex-col'>
       <section className='h-screen'>
         <div className='relative overflow-hidden bg-black'>
           <div className='h-72 md:h-48 w-full text-white relative top-40 md:left-52 left-10 text-3xl md:text-6xl font-bold p-3'>
