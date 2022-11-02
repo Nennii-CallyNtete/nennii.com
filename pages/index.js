@@ -17,9 +17,9 @@ export default function Home() {
       </Head>
 
       <main className='flex flex-col'>
-      <section className='h-screen'>
-        <div className='relative overflow-hidden bg-black'>
-          <div className='h-72 md:h-48 w-full text-white relative top-40 md:left-52 left-10 text-3xl md:text-6xl font-bold p-3'>
+      <section className='h-screen bg-black bg-fixed'>
+        <div className='relative overflow-hidden h-1/3 md:h-fit mx-auto'>
+          <div className='h-72 md:h-48 w-1/2 text-white relative top-40 md:left-52 left-10 text-3xl md:text-6xl font-bold'>
             <h1>
             Hi, I am <br className="block md:hidden" />
               <TypeAnimation
@@ -44,48 +44,50 @@ export default function Home() {
           <div className='absolute md:h-60 md:w-60 md:top-28 md:right-60 h-40 w-40 top-36 right-6'>
             <video src='/avatarvid.mov' autoPlay loop playsInline muted>Cant Display Video</video>
           </div>
-          <svg className='md:block align-bottom ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fillOpacity="1" d="M0,192L48,202.7C96,213,192,235,288,250.7C384,267,480,277,576,272C672,267,768,245,864,213.3C960,181,1056,139,1152,138.7C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+          <svg className='hidden md:block align-bottom ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fillOpacity="1" d="M0,192L48,202.7C96,213,192,235,288,250.7C384,267,480,277,576,272C672,267,768,245,864,213.3C960,181,1056,139,1152,138.7C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
-        <div className='bg-white flex flex-col md:flex-row w-10/12 mx-auto place-content-between'>
-          <div className='font-bold md:text-xl text-lg font-mono'>
-            <p><span className='text-orange-400'>let</span> me = &#123;</p>
-            <p className='pl-3 '><span className='text-purple-500'>name :</span><span className='text-emerald-600'> "Nennii"</span>,</p>
-            <p className='pl-3 '><span className='text-purple-500'>type :</span><span className='text-emerald-600'> ['Full Stack Developer', <br/><span className='pl-20'>'Data Scientist',</span> <br/><span className='pl-20'>'DevOps Engineer'</span> ]</span>,</p>
-            <p className='pl-3 '><span className='text-purple-500'>location :</span><span className='text-emerald-600'> "Calgary, AB Canada"</span>,</p>
-            <p className='pl-3 '><span className='text-purple-500'>properties : </span><br className="block md:hidden" />
-            <TypeAnimation
-                // Same String at the start will only be typed once, initially
-                sequence={[
-                '[ "JavaScript" , "SQL", "Python", "Elixir", "C++", ...resume ]',
-                2000,
-                ]}
-                speed={30} // Custom Speed from 1-99 - Default Speed: 40
-                style={{ color: '#059669' }}
-                wrapper="span" // Animation will be rendered as a <span>
-                repeat={Infinity} // Repeat this Animation Sequence infinitely
-              />
-            </p>
-            <span>&#125;</span>
-          </div>
-          <div className='flex flex-col place-content-around md:mr-28 font-semibold js-show-on-scroll h-auto'>
-            <button className='border px-5 my-2 py-2 bg-amber-500 hover:bg-amber-600 ease-in-out duration-300'>
-              <a href='/Resume-Dev.docx' download='Nennii_Cally_Ntete_Resume'>Get Resume</a>
-            </button>
-            <button className='border px-5 py-2 bg-amber-500 hover:bg-amber-600 ease-in-out duration-300'>
-              <a href='#projects-section'>See Projects</a>
-            </button>
-            <button className='border px-5 py-2 bg-amber-500 hover:bg-amber-600 ease-in-out duration-300' hidden>
-              <a href=''>Discover More</a>
-            </button>
-          </div>
+        <div className='bg-white w-screen flex flex-col md:flex-row h-2/3 md:h-1/2 mx-auto place-content-evenly'>
+                <div className='flex flex-col mx-auto md:flex-row md:w-9/12'>
+                  <div className='font-bold md:text-xl text-lg font-mono mx-auto w-10/12'>
+                    <p><span className='text-orange-400'>let</span> me = &#123;</p>
+                    <p className='pl-3 '><span className='text-purple-500'>name :</span><span className='text-emerald-600'> "Nennii"</span>,</p>
+                    <p className='pl-3 '><span className='text-purple-500'>type :</span><span className='text-emerald-600'> ['Full Stack Developer', <br/><span className='pl-20'>'Data Scientist',</span> <br/><span className='pl-20'>'DevOps Engineer'</span> ]</span>,</p>
+                    <p className='pl-3 '><span className='text-purple-500'>location :</span><span className='text-emerald-600'> "Calgary, AB Canada"</span>,</p>
+                    <p className='pl-3 '><span className='text-purple-500'>properties : </span><br className="block md:hidden" />
+                    <TypeAnimation
+                        // Same String at the start will only be typed once, initially
+                        sequence={[
+                        '[ "JavaScript" , "SQL", "Python", "Elixir", "C++", ...resume ]',
+                        2000,
+                        ]}
+                        speed={30} // Custom Speed from 1-99 - Default Speed: 40
+                        style={{ color: '#059669' }}
+                        wrapper="span" // Animation will be rendered as a <span>
+                        repeat={Infinity} // Repeat this Animation Sequence infinitely
+                      />
+                    </p>
+                    <span>&#125;</span>
+                  </div>
+                  <div className='mx-auto md:h-fit flex flex-col place-content-around md:mr-28 font-semibold js-show-on-scroll h-auto'>
+                    <button className='w-fit rounded-md border px-5 my-2 py-2 bg-amber-500 hover:bg-amber-600 ease-in-out duration-300'>
+                      <a href='/Resume-Dev.docx' download='Nennii_Cally_Ntete_Resume'>Resume</a>
+                    </button>
+                    <button className='w-fit rounded-md border px-5 py-2 bg-amber-500 hover:bg-amber-600 ease-in-out duration-300'>
+                      <a href='#projects-section'>Projects</a>
+                    </button>
+                    <button className='border px-5 py-2 bg-amber-500 hover:bg-amber-600 ease-in-out duration-300' hidden>
+                      <a href=''>Discover More</a>
+                    </button>
+                  </div>
+                </div>
         </div>
       </section>
-      <section className='h-screen bg-gradient-to-b from-black to-gray-600'>
+      <section className='h-max md:h-screen flex flex-col flex-wrap bg-fixed bg-gradient-to-b from-black to-gray-600 overflow-auto [@media(max-width:767px)]:scrollbar-hide"'>
         <div className='mx-auto text-center'>
           <div className='p-10'>
             <h1 className='text-white text-3xl md:text-6xl font-bold font-sans subpixel-antialiased'>My <span className='text-amber-500'>Pro</span>jects</h1>
           </div>
-          <div className='mt-5 h-20 w-20 mx-auto md:h-fit md:w-fit' id='projects-section'>
+          <div className='mt-5 w-20 mx-auto md:h-fit md:w-fit' id='projects-section'>
             <Image  
               src={avatarTwo}
               height={216.6}
@@ -94,11 +96,8 @@ export default function Home() {
               placeholder='blur'
             />
           </div>
-          <div>
-            <p></p>
-          </div>
-          <div className='flex flex-row flex-wrap place-content-around relative top-28 overflow-y-auto'>
-            <div className='w-40 h-60 md:w-60 md:h-72 bg-black text-white p-3 rounded-sm shadow-2xl shadow-amber-500 js-show-on-scroll'>
+          <div className='flex flex-col md:flex-row flex-wrap place-content-around md:w-screen md:px-20 relative top-28'>
+            <div className='mb-5 w-40 h-48 md:w-60 md:h-72 bg-black text-white p-3 rounded-xl shadow-xl shadow-amber-500'>
                 <div className='flex flex-col place-content-between h-full w-full'>
                   <div className='mx-auto'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 md:w-16 md:h-16 text-sky-300">
@@ -123,7 +122,7 @@ export default function Home() {
                   </div>
                 </div>
             </div>
-            <div className='w-40 h-60 md:w-60 md:h-72 bg-black text-white p-3 rounded-sm shadow-2xl shadow-amber-500'>
+            <div className='mb-5 w-40 h-48 md:w-60 md:h-72 bg-black text-white p-3 rounded-xl shadow-xl shadow-amber-500'>
                 <div className='flex flex-col place-content-between h-full'>
                   <div className='mx-auto'>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 md:w-16 md:h-16 text-sky-300">
@@ -148,7 +147,7 @@ export default function Home() {
                   </div>
                 </div>
             </div>
-            <div className='w-40 h-60 md:w-60 md:h-72 bg-black text-white p-3 rounded-sm shadow-2xl shadow-amber-500'>
+            <div className='mb-5 w-40 h-48 md:w-60 md:h-72 bg-black text-white p-3 rounded-xl shadow-xl shadow-amber-500'>
                 <div className='flex flex-col place-content-between h-full'>
                   <div className='mx-auto'>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 md:w-16 md:h-16 text-sky-300">
@@ -174,12 +173,16 @@ export default function Home() {
                 </div>
             </div>
           </div>
-          <div className='text-xs text-center text-slate-100'>
-              <footer><p>2022 Nennii Cally-Ntete</p></footer>
-          </div>
         </div>
+        <footer className='w-screen hidden'>
+          <div className='w-fit mx-auto text-sm'>
+            <span>Nennii Cally-Ntete 2022 | All Rights Reserved</span>
+          </div>
+        </footer>
       </section>
+      
       </main>
+     
 
     </div>
   )
