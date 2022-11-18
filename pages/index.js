@@ -14,9 +14,10 @@ export default function Home() {
         <title>Nennii.Dev</title>
         <meta name="description" content="Dev Portfolio web page of Nennii Cally-Ntete." />
         <link rel="icon" href="/myAvatar.svg" />
+        <link rel="apple-touch-icon" href="/myAvatar.svg" />
       </Head>
-
-      <main className='flex flex-col'>
+      
+      <main className='flex flex-col w-screen'>
       <section className='h-screen bg-black bg-fixed'>
         <div className='relative overflow-hidden h-1/3 md:h-fit mx-auto'>
           <div className='h-72 md:h-48 w-1/2 text-white relative top-40 md:left-52 left-10 text-3xl md:text-6xl font-bold'>
@@ -70,7 +71,7 @@ export default function Home() {
                   </div>
                   <div className='mx-auto md:h-fit flex flex-col place-content-around md:mr-28 font-semibold js-show-on-scroll h-auto'>
                     <button className='w-fit rounded-md border px-5 my-2 py-2 bg-amber-500 hover:bg-amber-600 ease-in-out duration-300'>
-                      <a href='/Resume-Dev.docx' download='Nennii_Cally_Ntete_Resume'>Resume</a>
+                      <a href='/Nennii-Cally-Ntete-ResumeCS.docx.pdf' download='Nennii_Cally_Ntete_Resume'>Resume</a>
                     </button>
                     <button className='w-fit rounded-md border px-5 py-2 bg-amber-500 hover:bg-amber-600 ease-in-out duration-300'>
                       <a href='#projects-section'>Projects</a>
@@ -82,10 +83,10 @@ export default function Home() {
                 </div>
         </div>
       </section>
-      <section className='h-max md:h-screen flex flex-col flex-wrap bg-fixed bg-gradient-to-b from-black to-gray-600 overflow-auto [@media(max-width:767px)]:scrollbar-hide"'>
-        <div className='mx-auto text-center'>
+      <div className='min-h-screen md:h-screen flex flex-col flex-wrap bg-fixed bg-white [@media(max-width:767px)]:scrollbar-hide'>
+        <div className='mx-auto text-center flex flex-col'>
           <div className='p-10'>
-            <h1 className='text-white text-3xl md:text-6xl font-bold font-sans subpixel-antialiased'>My <span className='text-amber-500'>Pro</span>jects</h1>
+            <h1 className='text-black text-3xl md:text-6xl font-bold font-sans subpixel-antialiased'>My <span className='text-amber-500'>Pro</span>jects</h1>
           </div>
           <div className='mt-5 w-20 mx-auto md:h-fit md:w-fit' id='projects-section'>
             <Image  
@@ -96,7 +97,7 @@ export default function Home() {
               placeholder='blur'
             />
           </div>
-          <div className='flex flex-col md:flex-row flex-wrap place-content-around md:w-screen md:px-20 relative top-28'>
+          <div className='flex flex-col md:flex-row flex-wrap place-content-around md:w-screen md:px-20 relative top-28 overflow-auto'>
             <div className='mb-5 w-40 h-48 md:w-60 md:h-72 bg-black text-white p-3 rounded-xl shadow-xl shadow-amber-500'>
                 <div className='flex flex-col place-content-between h-full w-full'>
                   <div className='mx-auto'>
@@ -113,11 +114,11 @@ export default function Home() {
                     </p>
                   </div>
                   <div className='flex flex-row place-content-between'>
-                    <button className='border px-2 py-1 bg-amber-500 border-none hover:bg-amber-600 ease-in-out duration-300 text-xs md:text-sm'>
+                    <button hidden className='border px-2 py-1 bg-amber-500 border-none hover:bg-amber-600 ease-in-out duration-300 text-xs md:text-sm'>
                       <a href=''>Read About it</a>
                     </button>
-                    <button className='text-xs'>
-                      <a href='' className='hover:text-blue-500 ease-in-out duration-300'>Live Demo &#62;</a>
+                    <button className='text-xs mx-auto'>
+                      <a href='https://aquamarine-kelpie-f7e314.netlify.app/' target='blank' className='hover:text-blue-500 ease-in-out duration-300'>Live Demo &#62;</a>
                     </button>
                   </div>
                 </div>
@@ -125,24 +126,24 @@ export default function Home() {
             <div className='mb-5 w-40 h-48 md:w-60 md:h-72 bg-black text-white p-3 rounded-xl shadow-xl shadow-amber-500'>
                 <div className='flex flex-col place-content-between h-full'>
                   <div className='mx-auto'>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 md:w-16 md:h-16 text-sky-300">
-                    <path fillRule="evenodd" d="M3 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5H15v-18a.75.75 0 000-1.5H3zM6.75 19.5v-2.25a.75.75 0 01.75-.75h3a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75h-3a.75.75 0 01-.75-.75zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 010 1.5h-.75A.75.75 0 016 6.75zM6.75 9a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zM6 12.75a.75.75 0 01.75-.75h.75a.75.75 0 010 1.5h-.75a.75.75 0 01-.75-.75zM10.5 6a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zm-.75 3.75A.75.75 0 0110.5 9h.75a.75.75 0 010 1.5h-.75a.75.75 0 01-.75-.75zM10.5 12a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zM16.5 6.75v15h5.25a.75.75 0 000-1.5H21v-12a.75.75 0 000-1.5h-4.5zm1.5 4.5a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008zm.75 2.25a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75v-.008a.75.75 0 00-.75-.75h-.008zM18 17.25a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008z" clipRule="evenodd" />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 md:w-16 md:h-16 text-sky-300">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
                   </svg>
                   </div>
                   <div>
-                    <h3 className='text-lg font-semibold'>InterFreak</h3>
+                  <h3 className='text-lg font-semibold'>HireMePlease!</h3>
                   </div>
                   <div>
                     <p className='text-xs md:text-sm overflow-clip truncate md:whitespace-normal'>
-                    A SAAS company project with a marketed software product targeting freelance developers and their workflows.
+                        Platform that helps users speed through and keep track of job application processes. 
                     </p>
                   </div>
                   <div className='flex flex-row place-content-between'>
-                    <button className='border px-2 py-1 bg-amber-500 border-none hover:bg-amber-600 ease-in-out duration-300 text-xs md:text-sm'>
+                    <button hidden className='border px-2 py-1 bg-amber-500 border-none hover:bg-amber-600 ease-in-out duration-300 text-xs md:text-sm'>
                       <a href=''>Read About it</a>
                     </button>
-                    <button className='text-xs'>
-                      <a href='' className='hover:text-blue-500 ease-in-out duration-300'>Live Demo &#62;</a>
+                    <button className='text-xs mx-auto'>
+                      <a href='' className='hover:text-blue-500 ease-in-out duration-300'>Coming Soon!</a>
                     </button>
                   </div>
                 </div>
@@ -155,7 +156,7 @@ export default function Home() {
                   </svg>
                   </div>
                   <div>
-                    <h3 className='text-lg font-semibold'>MachineLearning</h3>
+                    <h3 className='text-lg font-semibold'>Safeicc</h3>
                   </div>
                   <div>
                     <p className='text-xs md:text-sm overflow-clip truncate md:whitespace-normal'>
@@ -163,26 +164,24 @@ export default function Home() {
                     </p>
                   </div>
                   <div className='flex flex-row place-content-between'>
-                    <button className='border px-2 py-1 bg-amber-500 border-none hover:bg-amber-600 ease-in-out duration-300 text-xs md:text-sm'>
+                    <button hidden className='border px-2 py-1 bg-amber-500 border-none hover:bg-amber-600 ease-in-out duration-300 text-xs md:text-sm'>
                       <a href=''>Read About it</a>
                     </button>
-                    <button className='text-xs'>
-                      <a href='' className='hover:text-blue-500 ease-in-out duration-300'>Live Demo &#62;</a>
+                    <button className='text-xs mx-auto'>
+                      <a href='' className='hover:text-blue-500 ease-in-out duration-300'>Coming Soon!</a>
                     </button>
                   </div>
                 </div>
             </div>
           </div>
         </div>
-        <footer className='w-screen hidden'>
-          <div className='w-fit mx-auto text-sm'>
-            <span>Nennii Cally-Ntete 2022 | All Rights Reserved</span>
-          </div>
-        </footer>
-      </section>
+      </div>
       
+          
       </main>
-     
+      {/* <div className='mx-auto'>
+        <footer ><p className='text-black text-sm'>Nennii Cally-Ntete 2022 | All Rights Reserved</p></footer>
+      </div> */}
 
     </div>
   )
